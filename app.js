@@ -1,4 +1,3 @@
-//teste
 
 require('dotenv').config();
 
@@ -13,7 +12,7 @@ const path         = require('path');
 
 
 mongoose
-  .connect('mongodb://localhost/projeto2', {useNewUrlParser: true})
+  .connect('mongodb://localhost/projeto2', {useNewUrlParser: true,  useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -55,6 +54,15 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const profile = require('./routes/profile');
+app.use('/', profile);
+
+const auth = require('./routes/auth');
+app.use('/', auth);
+
+const lyricsResult = require('./routes/lyrics-result');
+app.use('/', lyricsResult);
 
 
 module.exports = app;
