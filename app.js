@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 547a7e0c12246771f07b614ba9bcea2b5017f3e3
 require('dotenv').config();
 
 const bodyParser   = require('body-parser');
@@ -42,16 +38,24 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
       
-
+//require the genious api goes here:
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
+//Entry point of our application
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
+
+
+
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Genius';
 
 
 
@@ -67,5 +71,10 @@ app.use('/', auth);
 const lyricsResult = require('./routes/lyrics-result');
 app.use('/', lyricsResult);
 
+const songs = require('./routes/songs');
+app.use('/', songs);
+
 
 module.exports = app;
+
+  
