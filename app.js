@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 547a7e0c12246771f07b614ba9bcea2b5017f3e3
 require('dotenv').config();
 
 const bodyParser   = require('body-parser');
