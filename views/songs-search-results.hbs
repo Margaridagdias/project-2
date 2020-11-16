@@ -2,15 +2,31 @@
 
 
 <div id="homepage">
-    <div id="search-homepage">
-<form action="/songs-search" method="POST">
-<input id="search-bar" type="text" name="artist">
-<div>
-<button type="submit">Search Songs</button>
+  <div id="search-homepage">
+    <form action="/songs-search" method="POST">
+      <input id="search-bar" type="text" name="artist">
+      <div>
+        <button type="submit">Search Songs</button>
+      </div>
+    </form>
+  </div>
 </div>
-</form>
-</div>
-</div>
+
+{{!-- FALTAAAAAAAAAAAA ulnessar ----------------------------------------------------  --}}
+
+{{#unless songs}}
+
+  <ul>
+    {{each result.full_title}}
+    <li>
+       {{history}}
+       History
+    </li>
+    {{/each}}
+    </ul>
+
+{{/unless}}
+
 
 <ul>
 {{#each songs}}
