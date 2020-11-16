@@ -12,7 +12,7 @@ function requireLogin(req, res, next) {
 
 router.get('/main', (req, res, next) => {
   req.app.locals.loggedUser = req.session.currentUser;
-  res.render('search-lyrics', { user: req.session.currentUser });
+  res.render('songs-search-results', { user: req.session.currentUser });
 });
 
 

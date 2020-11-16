@@ -1,22 +1,31 @@
-<div id=“homepage”>
-    <div id=“search-homepage”>
-<form action=“/songs-search” method=“POST”>
-<input id=“search-bar” type=“text” name=“lyric”>
+<div id="homepage">
+    <div id="search-homepage">
+<form action="/songs-search" method="POST">
+<input id="search-bar" type="text" name="artist">
 <div>
-<button type=“submit”>Search Songs</button>
+<button type="submit">Search Songs</button>
 </div>
 </form>
 </div>
 </div>
 
+<ul>
 {{#each songs}}
+<li>
+  {{result.full_title}}
+  <a href="/lyrics-result/{{result.id}}">View Lyrics</a>
+</li>
+<li>
+  <img src="{{result.header_image_thumbnail_url}}" alt="image">
+</li>
 {{/each}}
+</ul>
 
 {{#if user}}
   Welcome {{user.username}}
-  <form action=“/logout” method=“POST”>
-    <button type=“submit”>Logout</button>
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
   </form>
 {{else}}
-  <a href=“/login”>Login</a>
+  <a href="/login">Login</a>
 {{/if}}

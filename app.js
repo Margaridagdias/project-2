@@ -89,13 +89,12 @@ app.use('/', auth);
 const lyricsResult = require('./routes/lyrics-result');
 app.use('/', lyricsResult);
 
-<<<<<<< HEAD
 const main = require('./routes/main');
 app.use('/', main);
-=======
+
 const songs = require('./routes/songs');
 app.use('/', songs);
->>>>>>> 50aee77f3ae6ed8a90b6b62394a645ab8760a1a9
+
 
 
 module.exports = app;
