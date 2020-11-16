@@ -1,6 +1,7 @@
 const express = require('express');
 const app = require('../app');
 const router  = express.Router();
+const User = require('../models/User.model')
 
 function requireLogin(req, res, next) {
   if (req.session.currentUser) {

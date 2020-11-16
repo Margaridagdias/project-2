@@ -1,1 +1,14 @@
-PROFILE HBS
+PROFILE EDIT
+
+{{thisUser.username}}
+{{thisUser.email}}
+
+<form action="/profile" method="POST">
+ <label>Username</label>
+ <input type="text" name="username" value="{{thisUser.username}}">
+  <label>Email</label>
+ <input type="text" name="username" value="{{thisUser.email}}">
+
+<button type="submit">Update</button>
+
+</form>
