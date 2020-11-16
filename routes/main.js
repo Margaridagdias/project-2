@@ -1,6 +1,7 @@
 const express = require('express');
 const app = require('../app');
 const router  = express.Router();
+const History = require('../models/History');
 
 function requireLogin(req, res, next) {
   if (req.session.currentUser) {
@@ -12,7 +13,10 @@ function requireLogin(req, res, next) {
 
 router.get('/main', (req, res, next) => {
   req.app.locals.loggedUser = req.session.currentUser;
-  res.render('songs-search-results', { user: req.session.currentUser });
+  History.find()
+  .then((historyResults)=> {
+    res.render('songs-search-results', { user: req.session.currentUser, historyResults: historyResults });
+  });
 });
 
 
