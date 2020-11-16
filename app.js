@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 547a7e0c12246771f07b614ba9bcea2b5017f3e3
 require('dotenv').config();
 
 const bodyParser   = require('body-parser');
@@ -12,6 +8,8 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const session      = require('express-session');
+const MongoStore   = require('connect-mongo')(session);
 
 
 mongoose
@@ -48,6 +46,22 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
+// Express session setup
+app.use(
+  session({
+    secret: 'my secret',
+    cookie: { maxAge: 60000},
+    rolling: true,
+    store: new MongoStore({ //store session information in mongo
+      mongooseConnection: mongoose.connection
+    })
+  })
+)
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
@@ -66,6 +80,9 @@ app.use('/', auth);
 
 const lyricsResult = require('./routes/lyrics-result');
 app.use('/', lyricsResult);
+
+const main = require('./routes/main');
+app.use('/', main);
 
 
 module.exports = app;

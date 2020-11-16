@@ -1,0 +1,22 @@
+<div id="homepage">
+    <div id="search-homepage">
+<form action="/songs-search" method="POST">
+<input id="search-bar" type="text" name="lyric">
+<div>
+<button type="submit">Search Songs</button>
+</div>
+</form>
+</div>
+</div>
+
+{{#each songs}}
+{{/each}}
+
+{{#if user}}
+  Welcome {{user.username}}
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+{{else}}
+  <a href="/login">Login</a>
+{{/if}}

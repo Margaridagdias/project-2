@@ -10,15 +10,12 @@ function requireLogin(req, res, next) {
   }
 }
 
-/* GET home page */
-router.get('/', (req, res, next) => {
+router.get('/main', (req, res, next) => {
   req.app.locals.loggedUser = req.session.currentUser;
-  res.render('index', { user: req.session.currentUser });
+  res.render('search-lyrics', { user: req.session.currentUser });
 });
 
-router.get('/seach-lyrics', requireLogin, (req, res) => {
-  res.render('private');
-});
+
 
 
 

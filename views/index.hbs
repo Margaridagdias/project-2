@@ -1,13 +1,13 @@
-<div id="homepage">
-    <div id="search-homepage">
-<form method="GET", action="/lyrics">
-<input id="search-bar" type="text" name="lyric">
-<div>
-<button>Search for an artist</button>
-</div>
-</form>
-</div>
-</div>
+<a href="/signup">Signup</a>
 
-<a href="/auth">Auth</a>
-<a href="/profile">Profile</a>
+
+
+{{#if user}}
+  Welcome {{user.username}}
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+  <a href="/private">Private</a>
+{{else}}
+  <a href="/login">Login</a>
+{{/if}}
