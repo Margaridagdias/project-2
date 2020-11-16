@@ -40,7 +40,7 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
       
-
+//require the genious api goes here:
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -63,9 +63,17 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
+//Entry point of our application
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
+
+
+
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Genius';
 
 
 
@@ -81,8 +89,15 @@ app.use('/', auth);
 const lyricsResult = require('./routes/lyrics-result');
 app.use('/', lyricsResult);
 
+<<<<<<< HEAD
 const main = require('./routes/main');
 app.use('/', main);
+=======
+const songs = require('./routes/songs');
+app.use('/', songs);
+>>>>>>> 50aee77f3ae6ed8a90b6b62394a645ab8760a1a9
 
 
 module.exports = app;
+
+  
