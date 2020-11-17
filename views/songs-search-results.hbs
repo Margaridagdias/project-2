@@ -16,7 +16,21 @@
 
 {{/unless}} --}}
 
+{{#if user}}
+<div id="homepage">
+  <div id="search-homepage">
+    <form action="/songs-search" method="POST">
+      <input id="search-bar" type="text" name="artist" value="Search your lyrics">
+      <div>
+        <button type="submit" class="btn btn-danger">Search Songs</button>
+      </div>
+    </form>
+  </div>
+</div>
+{{else}}
 
+  <a href="/login">Login</a>
+{{/if}}
 
 
 
@@ -34,19 +48,4 @@
 </div>
 
 
-{{#if user}}
-<div id="homepage">
-  <div id="search-homepage">
-    <form action="/songs-search" method="POST">
-      <input id="search-bar" type="text" name="artist" value="Search your lyrics">
-      <div>
-        <button type="submit" class="btn btn-danger">Search Songs</button>
-      </div>
-    </form>
-  </div>
-</div>
 
-{{else}}
-
-  <a href="/login">Login</a>
-{{/if}}

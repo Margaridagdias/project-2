@@ -10,9 +10,11 @@ router.get('/songs-search', (req, res, next) => {
 });
 
 router.post('/songs-search', (req, res, next) => {
+  req.app.locals.loggedUser = req.session.currentUser;
   genius.search(req.body.artist).then((response) => {
+
     console.log('hits', response.hits);
-    res.render('songs-search-results', { songs: response.hits});
+    res.render('songs-search-results', { songs: response.hits, user: req.session.currentUser});
   });
   
 });
