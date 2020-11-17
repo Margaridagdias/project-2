@@ -1,19 +1,22 @@
 <h1>LYRICS</h1>
 
-<div>
-<img src="{{songs.header_image_url}}" alt="Header">
+<div id="results-container">
+<div class="card mb-3"> 
+  <img class="card-img-top" src="{{songs.header_image_url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{songs.full_title}}</h5>
+    <p class="card-text">{{{songs.embed_content}}}</p>
+    <p class="card-text"><small class="text-muted">Total views: {{songs.stats.pageviews}}</small></p>
+   
+    <div id="results-container">
+    <a href="{{songs.media.0.url}}">
+    <img border="0" alt="Play on youtube" src="../images/ListenOnYouTube copy.png">
+    </a>
+
+    <a href="{{songs.media.1.url}}">
+    <img border="0" alt="Play on spotify" src="../images/Spotify.png">
+    </a>
+    </div>
+  </div>
 </div>
-<div>
-<div>{{{songs.embed_content}}}</div>
 </div>
-
-
-<label for="">Views: {{songs.stats.pageviews}}</label>
-
-<a href="{{songs.media.0.url}}">
-<img border="0" alt="Play on youtube" src="../images/ListenOnYouTube copy.png">
-</a>
-
-<a href="{{songs.media.1.url}}">
-<img border="0" alt="Play on spotify" src="../images/Spotify.png">
-</a>

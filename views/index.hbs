@@ -1,12 +1,47 @@
-{{#if user}}
+<nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark" style="background-color: #403D39;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/signup">Sign up <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/signup" tabindex="-1" aria-disabled="true">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="Homepage-div">
+<h2>Unleash the music</h2>
+<p>Can't find the music stuck in your head?</p>
+<a href="/signup" class="btn btn-warning">Sign up for free</a>
+<a href="/login" class="btn btn-warning">Login</a>
+</div>
+
+
+<div id="Homepage-div1">
+<h2>More than 25 million songs</h2>
+<p>We're sure you can find "that" music!</p>
+</div>
+
+
+
+
+{{!-- {{#if user}}
   Welcome {{user.username}}
   <form action="/logout" method="POST">
     <button type="submit">Logout</button>
   </form>
-  <a href="/private">Private</a>
 {{else}}
- 
- <h2>Signup</h2>
+<br>
 <div id="index-container">
   <div id="signup-form">
 <div class="input-group flex-nowrap">
@@ -42,4 +77,4 @@
     <div class="error">{{ errorMessage}} </div>
   {{/if}}
 
-{{/if}}
+{{/if}} --}}

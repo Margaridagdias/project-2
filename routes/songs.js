@@ -5,7 +5,8 @@ const { response } = require('../app');
 const genius = new geniusAPI('K5zGBdFLMx1ycnEEde2N8LnaQz3s_swt7goDvm7etnBV9x4F-h3sQ8zRyE6VGjyz');
 
 router.get('/songs-search', (req, res, next) => {
-  res.render('songs-search-results');
+  req.app.locals.loggedUser = req.session.currentUser;
+  res.render('songs-search-results', { user: req.session.currentUser});
 });
 
 router.post('/songs-search', (req, res, next) => {

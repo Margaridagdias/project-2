@@ -5,7 +5,8 @@ const genius = new geniusAPI('K5zGBdFLMx1ycnEEde2N8LnaQz3s_swt7goDvm7etnBV9x4F-h
 
 
 router.get('/lyrics', (req, res, next) => {
-  res.render('lyrics-result');
+  req.app.locals.loggedUser = req.session.currentUser;
+  res.render('lyrics-result', { user: req.session.currentUser});
 });
 
 

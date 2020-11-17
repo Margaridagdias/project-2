@@ -20,14 +20,14 @@
 
 
 
-<div id="search-result-container" class="container-fluid">
+<div id="search-result-container" class="row">
 {{#each songs}}
 <div class="card" style="width: 20rem;">
   <img src="{{result.header_image_thumbnail_url}}" class="card-img-top" alt="album_cover">
   <div class="card-body">
     <h5 class="card-title">{{result.full_title}}</h5>
     <p class="card-text">Searched: {{result.stats.pageviews}} times</p>
-    <a href="/lyrics-result/{{result.id}}" class="btn btn-primary">View Lyrics</a>
+    <a href="/lyrics-result/{{result.id}}" class="btn btn-dark">View Lyrics</a>
   </div>
 </div>
 {{/each}}
@@ -47,6 +47,6 @@
 </div>
 
 {{else}}
-  
+
   <a href="/login">Login</a>
 {{/if}}
