@@ -5,16 +5,24 @@ const User = require ('../models/User.model')
 
 router.get('/profile', (req, res, next) => {
   let user = req.app.locals.loggedUser
-  User.findById(user._id)
   console.log(user._id)
-  .then(thisUser => {
-
-    res.render('profile', thisUser);
+  User.findById(user._id)
+  .then((thisUser) => {
+    res.render('profile', {thisUser});
   })
 
 });
 
-
+router.post('/profile', (req, res) => {
+  let user = req.app.locals.loggedUser
+  let { username, email} = req.body;
+  User.findByIdAndUpdate(user._id, {
+    username,
+    email
+  }).then((updatedUser) => {
+    res.redirect(`/profile`);
+  });
+});
 
 
 
