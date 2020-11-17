@@ -10,17 +10,21 @@ router.get('/lyrics', (req, res, next) => {
 });
 
 
+
 router.get('/lyrics-result/:songId', (req, res) => {
   req.app.locals.loggedUser = req.session.currentUser;
   let songId = req.params.songId;
   genius.song(songId)
     .then((songFound) => {
-      console.log ('testeeeeeeeee', songFound.song);
-      res.render('lyrics-result', { songs: songFound.song, user: req.session.currentUser});
+      console.log ('artist', songFound);
+    // falta acrescentar à frente de artist name e song ------------------------------------------
+       History.create({ song: songFound.song.full_title, image: songFound.song.header_image_thumbnail_url}).then(() => {
+      res.render('lyrics-result', { songs: songFound.song.image, user: req.session.currentUser});
     })
     .catch((err) => {
       res.render('error', { err });
     })
+});
 });
 
 
