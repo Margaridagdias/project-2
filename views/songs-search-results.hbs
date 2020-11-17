@@ -1,22 +1,3 @@
-
-
-
-{{!-- FALTAAAAAAAAAAAA ulnessar ----------------------------------------------------  --}}
-
-{{!-- {{#unless songs}}
-
-  <ul>
-    {{each result.full_title}}
-    <li>
-       {{history}}
-       History
-    </li>
-    {{/each}}
-    </ul>
-
-{{/unless}} --}}
-
-
 <div id="search-result-container">
 {{#each songs}}
 
@@ -35,11 +16,26 @@
 <div id="homepage">
   <div id="search-homepage">
     <form action="/songs-search" method="POST">
-      <input id="search-bar" type="text" name="artist" value="Search your lyrics">
+      <input id="search-bar" type="text" name="artist" placeholder="Search your lyrics">
       <div>
         <button type="submit" class="btn btn-danger">Search Songs</button>
       </div>
     </form>
+  </div>
+  <div>
+
+    {{#unless songs}}
+
+      <ul>
+      {{#each historyResults}}
+      <li>
+        {{song}}
+        <img src="{{image}}" />
+      </li>
+      {{/each}}
+      </ul> 
+
+    {{/unless}}
   </div>
 </div>
 
