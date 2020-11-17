@@ -1,14 +1,24 @@
-PROFILE EDIT
-
-{{thisUser.username}}
-{{thisUser.email}}
-
+<h1>PROFILE EDIT</h1>
+</form>
 <form action="/profile" method="POST">
- <label>Username</label>
- <input type="text" name="username" value="{{thisUser.username}}">
-  <label>Email</label>
- <input type="text" name="username" value="{{thisUser.email}}">
+<div id="index-container">
+  <div id="signup-form">
+<div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Username</span>
+  </div>
+  <input name= "username" type="text" class="form-control" placeholder="{{thisUser.username}}" aria-label="Username" aria-describedby="addon-wrapping" required>
+</div>
 
-<button type="submit">Update</button>
-
+<div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Email</span>
+  </div>
+  <input name= "email" type="email" class="form-control" placeholder="{{thisUser.email}}" aria-label="email" aria-describedby="addon-wrapping" required>
+</div>
+</div>
+</div>
+<div id="index-container">
+<button type="submit" class="btn btn-dark">Update</button>
+</div>
 </form>

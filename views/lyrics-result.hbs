@@ -1,17 +1,19 @@
 <h1>LYRICS</h1>
 
-<img src="{{songs.header_image_thumbnail_url}}" alt="">
-{{{songs.embed_content}}}
+<div>
+<img src="{{songs.header_image_url}}" alt="Header">
+</div>
+<div>
+<div>{{{songs.embed_content}}}</div>
+</div>
 
-<<<<<<< HEAD
-{{!-- <audio controls src="{{songs.apple_music_player_url}}"></audio>
-<iframe controls src="{{songs.apple_music_player_url}}" frameborder="0"></iframe> --}}
 
+<label for="">Views: {{songs.stats.pageviews}}</label>
 
-<audio controls>
-  <source src="{{songs.apple_music_player_url}}">
-</audio>
+<a href="{{songs.media.0.url}}">
+<img border="0" alt="Play on youtube" src="../images/ListenOnYouTube copy.png">
+</a>
 
-<iframe src="http://www.youtube.com/watch?v=DoIHZXoxAhU" frameborder="0"></iframe>
-=======
->>>>>>> 724898372e2606f1b118540257e5e692d7bb7771
+<a href="{{songs.media.1.url}}">
+<img border="0" alt="Play on spotify" src="../images/Spotify.png">
+</a>

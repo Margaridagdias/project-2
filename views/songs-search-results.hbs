@@ -1,20 +1,9 @@
-<a href="/profile">Profile</a>
 
 
-<div id="homepage">
-  <div id="search-homepage">
-    <form action="/songs-search" method="POST">
-      <input id="search-bar" type="text" name="artist">
-      <div>
-        <button type="submit">Search Songs</button>
-      </div>
-    </form>
-  </div>
-</div>
 
 {{!-- FALTAAAAAAAAAAAA ulnessar ----------------------------------------------------  --}}
 
-{{#unless songs}}
+{{!-- {{#unless songs}}
 
   <ul>
     {{each result.full_title}}
@@ -25,26 +14,35 @@
     {{/each}}
     </ul>
 
-{{/unless}}
+{{/unless}} --}}
 
 
-<ul>
+<div id="search-result-container">
 {{#each songs}}
-<li>
-  {{result.full_title}}
-  <a href="/lyrics-result/{{result.id}}">View Lyrics</a>
-</li>
-<li>
-  <img src="{{result.header_image_thumbnail_url}}" alt="image">
-</li>
+
+<div class="card" style="width: 20rem;">
+  <img src="{{result.header_image_thumbnail_url}}" class="card-img-top" alt="album_cover">
+  <div class="card-body">
+    <h5 class="card-title">{{result.full_title}}</h5>
+    <p class="card-text">Searched: {{result.stats.pageviews}} times</p>
+    <a href="/lyrics-result/{{result.id}}" class="btn btn-primary">View Lyrics</a>
+  </div>
+</div>
 {{/each}}
-</ul>
+</div>
 
 {{#if user}}
-  Welcome {{user.username}}
-  <form action="/logout" method="POST">
-    <button type="submit">Logout</button>
-  </form>
+<div id="homepage">
+  <div id="search-homepage">
+    <form action="/songs-search" method="POST">
+      <input id="search-bar" type="text" name="artist" value="Search your lyrics">
+      <div>
+        <button type="submit" class="btn btn-danger">Search Songs</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 {{else}}
   <a href="/login">Login</a>
 {{/if}}

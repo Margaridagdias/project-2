@@ -1,4 +1,10 @@
-<div id="homepage">
+
+{{#each songs}}
+{{/each}}
+
+{{#if user}}
+  Welcome sadsdasd {{user.username}}
+  <div id="homepage">
     <div id="search-homepage">
 <form action="/songs-search" method="POST">
 <input id="search-bar" type="text" name="lyric">
@@ -9,11 +15,6 @@
 </div>
 </div>
 
-{{#each songs}}
-{{/each}}
-
-{{#if user}}
-  Welcome {{user.username}}
   <form action="/logout" method="POST">
     <button type="submit">Logout</button>
   </form>
