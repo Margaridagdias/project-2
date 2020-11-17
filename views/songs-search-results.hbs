@@ -26,6 +26,16 @@
       </div>
     </form>
   </div>
+  {{#unless songs}}
+      <ul>
+      {{#each historyResults}}
+      <li>
+        {{song}}
+        <img src="{{image}}" />
+      </li>
+      {{/each}}
+      </ul> 
+    {{/unless}}
 </div>
 {{else}}
 
