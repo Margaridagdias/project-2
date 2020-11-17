@@ -1,4 +1,4 @@
-<h2>Signup</h2>
+{{!-- <h2>Signup</h2>
 <form action="/signup" method="POST">
   <label>
     Username
@@ -17,4 +17,41 @@
   {{#if errorMessage}}
     <div class="error">{{ errorMessage}} </div>
   {{/if}}
+</form> --}}
+
+ <h2>Signup</h2>
+<div id="index-container">
+  <div id="signup-form">
+<div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <form action="/signup" method="POST">
+    <span class="input-group-text" id="addon-wrapping">Username</span>
+  </div>
+  <input name= "username" type="text" class="form-control" placeholder="choose your username" aria-label="Username" aria-describedby="addon-wrapping" required>
+</div>
+
+<div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Email</span>
+  </div>
+  <input name= "email" type="email" class="form-control" placeholder=" add your email" aria-label="email" aria-describedby="addon-wrapping" required>
+</div>
+
+<div class="input-group flex-nowrap">
+   <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">Password</span>
+  </div>
+  <input name= "password" type="password" class="form-control" placeholder="choose your password" aria-label="password" aria-describedby="addon-wrapping" required>
+</div>
+</div>
+</div>
+
+  <div id="index-container">
+  <button type="submit" class="btn btn-dark">Create account</button>
+ {{#if errorMessage}}
+    <div class="error">{{ errorMessage}} </div>
+  {{/if}}
 </form>
+
+  <p>Already have an account? <a href="/login">Login</a></p> 
+  </div>

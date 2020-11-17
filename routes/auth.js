@@ -53,7 +53,7 @@ router.post('/signup', (req, res) => {
           if (error.code === 11000) {
             res.status(500).
             render('auth/signup', {
-              errorMessage: 'Username and email need to be unique'
+              errorMessage: 'Username or email already taken'
             })
           }
          // console.log('error', error);

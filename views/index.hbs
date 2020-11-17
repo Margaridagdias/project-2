@@ -5,12 +5,13 @@
   </form>
   <a href="/private">Private</a>
 {{else}}
+ 
  <h2>Signup</h2>
 <div id="index-container">
   <div id="signup-form">
 <div class="input-group flex-nowrap">
   <div class="input-group-prepend">
-    <form action="/signup" method="POST"></form>
+    <form action="/signup" method="POST">
     <span class="input-group-text" id="addon-wrapping">Username</span>
   </div>
   <input name= "username" type="text" class="form-control" placeholder="choose your username" aria-label="Username" aria-describedby="addon-wrapping" required>
@@ -32,26 +33,13 @@
 </div>
 </div>
 
-
-{{!-- <form action="/signup" method="POST">
-  <label>
-    Username
-    <input type="text" name="username" placeholder="Your username" class="input-group-text" id="addon-wrapping" required>
-  </label>
-  <label>
-    Email
-    <input type="email" name="email" placeholder="Your email">
-  </label>
-  <label>
-    Password
-    <input type="password" name="password" placeholder="Your password" required>
-  </label> --}}
   <div id="index-container">
   <button type="submit" class="btn btn-dark">Create account</button>
+  </form>
   <p>Already have an account? <a href="/login">Login</a></p> 
   </div>
   {{#if errorMessage}}
     <div class="error">{{ errorMessage}} </div>
   {{/if}}
-</form>
+
 {{/if}}
