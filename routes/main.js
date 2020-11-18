@@ -18,7 +18,15 @@ router.get('/main', (req, res, next) => {
   .sort("-date")
   .limit(8)
   .then((historyResults)=> {
-    res.render('songs-search-results', { user: req.app.locals.loggedUser, historyResults: historyResults });
+
+  let filterArray = historyResults.filter((result, pos, arr) => {
+      return pos === arr.findIndex(el => (el['song'] === result['song']))
+    })
+
+    let limitArray = [...filterArray.slice(0, 10)]
+
+    
+    res.render('songs-search-results', { user: req.app.locals.loggedUser, historyResults: limitArray });
   });
 });
 
