@@ -10,7 +10,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, firstname, lastname } = req.body;
   //hash the password
   const salt = bcrypt.genSaltSync(saltRounds);
   const hashPassword = bcrypt.hashSync(password, salt);
@@ -45,7 +45,7 @@ router.post('/signup', (req, res) => {
 
 
 
-      User.create({ username, email, password: hashPassword})
+      User.create({ username, email, password: hashPassword, firstname, lastname })
         .then(() => {
           res.redirect('/');
         })
