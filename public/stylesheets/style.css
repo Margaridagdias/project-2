@@ -174,7 +174,9 @@ a {
 #results-container {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 50%;
+  margin-left: 25%; }
 
 /*# sourceMappingURL=style.css.map */
 

@@ -2,7 +2,7 @@
 <h1>Finna</h1>
 </div>
 
-<div id="container">
+{{!-- <div id="container">
 </div>
 </form>
 <form action="/profile" method="POST">
@@ -26,4 +26,22 @@
 <div id="index-container">
 <button type="submit" class="btn btn-dark">Update</button>
 </div>
+</form> --}}
+
+<div id="index-container" style="margin-top: 100px;">
+<form action="/profile" method="POST">
+<div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input  name="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="{{thisUser.username}}">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input  name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{thisUser.email}}">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-dark">Update</button>
+ {{#if errorMessage}}
+    <div class="error">{{ errorMessage}} </div>
+  {{/if}}
 </form>
+</div>
