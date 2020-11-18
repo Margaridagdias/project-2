@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
@@ -9,12 +12,46 @@ body {
 a {
   color: #00B7FF; }
 
+
+/* Login view */ 
+#login-form {
+  margin-top: 200px;
+  background-color: black;
+  height: 300px;
+  width: 400px;
+}
+
+
 /* index view */
+
+#nav-bar-logo {
+  /* finna */
+font-family: 'Syne Mono', monospace;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+letter-spacing: 0.075em;
+
+color: white;
+}
+
+#logo {
+font-family: 'Syne Mono', monospace;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+font-size: 100em;
+text-align: center;
+color:black;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
 
 #Homepage-div {
   background-image: url(../images/music-happy.jpg);
   background-size: cover;
-  height: 1000px;
+  height: 800px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -99,7 +136,7 @@ a {
 #search-homepage button {
   margin-top: 20px;
   width: 200px;
-  margin-left: 350px;
+  margin-left: 360px;
 }
 
 #search-bar {
@@ -107,6 +144,7 @@ a {
   outline: none;
   box-shadow: 5px 5px #888888;
   color: white;
+  text-align: center;
   width: 900px;
   margin: 5px;
   height: 50px;
@@ -139,14 +177,40 @@ a {
 
 /* songs search view*/
 
-#search-result-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+#search-result-container h6 {
+  height: 100px;
+
+}
+#search-result-container img {
+  height: 286px;
 }
 
-.card {
-  width: 400px;
+#search-result-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#historic-container img {
+  height: 140px;
+}
+
+#historic-container {
+  justify-content: center;
+}
+
+#historic-div {
+  margin-top: 50px;
+  background-color: black;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
+}
+
+#historic-div h5 {
+  color: white;
+  padding: 5px;
+
 }
 
 
@@ -156,6 +220,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 
 
 /*# sourceMappingURL=style.css.map */

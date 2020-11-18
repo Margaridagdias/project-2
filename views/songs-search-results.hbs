@@ -1,56 +1,28 @@
-
-
-
-{{!-- FALTAAAAAAAAAAAA ulnessar ----------------------------------------------------  --}}
-
-{{!-- {{#unless songs}}
-
-  <ul>
-    {{each result.full_title}}
-    <li>
-       {{history}}
-       History
-    </li>
-    {{/each}}
-    </ul>
-
-{{/unless}} --}}
-
+<div id="logo">
+<h1>Finna</h1>
+</div>
 {{#if user}}
+<div id="container">
+</div>
 <div id="homepage">
   <div id="search-homepage">
     <form action="/songs-search" method="POST">
-      <input id="search-bar" type="text" name="artist" value="Search your lyrics">
+      <input id="search-bar" type="text" name="artist" placeholder="   Search your lyrics" onfocus="this.placeholder = ''"
+onblur="this.placeholder = '   Search your lyrics'">
       <div>
         <button type="submit" class="btn btn-danger">Search Songs</button>
       </div>
     </form>
   </div>
-  {{#unless songs}}
-      <ul>
-      {{#each historyResults}}
-      <li>
-        {{song}}
-        <img src="{{image}}" />
-      </li>
-      {{/each}}
-      </ul> 
-    {{/unless}}
-</div>
-{{else}}
 
-  <a href="/login">Login</a>
-{{/if}}
-
-
-
+<hr>
 <div id="search-result-container" class="row">
 {{#each songs}}
 <div class="card" style="width: 20rem;">
   <img src="{{result.header_image_thumbnail_url}}" class="card-img-top" alt="album_cover">
-  <div class="card-body">
-    <h5 class="card-title">{{result.full_title}}</h5>
-    <p class="card-text">Searched: {{result.stats.pageviews}} times</p>
+  <div class="card-body" style="align-items: center">
+    <h6 class="card-title">{{result.full_title}}</h6>
+    {{!-- <p class="card-text" style="height: 200px;">Searched: {{result.stats.pageviews}} times</p> --}}
     <a href="/lyrics-result/{{result.id}}" class="btn btn-dark">View Lyrics</a>
   </div>
 </div>
@@ -58,4 +30,40 @@
 </div>
 
 
+
+{{#unless songs}}
+<div id="historic-div">
+ <h5>Last seen</h5>
+<div id="historic-container" class="row">
+{{#each historyResults}}
+<div class="card-deck" style="width: 200px;", style="""height: 70px;">
+  <div class="card">
+    <img class="card-img-top" src="{{image}}" alt="Card image cap">
+    <div class="card-body">
+      <h7 class="card-title">{{song}} </h7>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">total views </small>
+    </div>
+  </div>
+</div>
+    {{/each}}
+    </div>
+    </div>
+{{/unless}}
+
+{{else}}
+<div id="Homepage-div">
+<h2>Unleash the music</h2>
+<p>Can't find the music stuck in your head?</p>
+<a href="/signup" class="btn btn-warning">Sign up for free</a>
+<a href="/login" class="btn btn-warning">Login</a>
+</div>
+
+
+<div id="Homepage-div1">
+<h2>More than 25 million songs</h2>
+<p>We're sure you can find "that" music!</p>
+</div>
+{{/if}}
 

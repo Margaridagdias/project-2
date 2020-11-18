@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 const { Schema, model }  = mongoose;
-
 const historySchema = new Schema(
   {
-    artistName: {
+    song: {
       type: String
     },
-    song: {
+    image: {
       type: String
     }
   }
 )
-
-module.exports= model('Historico', historySchema);
+module.exports= model('History', historySchema);
