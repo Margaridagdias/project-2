@@ -50,7 +50,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(
   session({
     secret: 'my secret',
-    cookie: { maxAge: 60000},
+    cookie: { maxAge: 24*15*1000},
     rolling: true,
     store: new MongoStore({ //store session information in mongo
       mongooseConnection: mongoose.connection

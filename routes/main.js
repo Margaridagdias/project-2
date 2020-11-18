@@ -16,7 +16,7 @@ router.get('/main', (req, res, next) => {
   req.app.locals.loggedUser = req.session.currentUser;
   History.find()
   .then((historyResults)=> {
-    res.render('songs-search-results', { user: req.session.currentUser, historyResults: historyResults });
+    res.render('songs-search-results', { user: req.app.locals.loggedUser, historyResults: historyResults });
   });
 });
 
