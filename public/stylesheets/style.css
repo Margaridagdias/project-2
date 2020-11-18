@@ -166,6 +166,10 @@ a {
   color: white;
   padding: 5px; }
 
+.card-deck {
+  background-color: black !important;
+  padding: 20px; }
+
 /*lyrics result*/
 #results-container {
   display: flex;

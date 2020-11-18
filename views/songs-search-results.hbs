@@ -1,7 +1,8 @@
+
+{{#if user}}
 <div id="logo">
 <h1>Finna</h1>
 </div>
-{{#if user}}
 <div id="container">
 </div>
 <div id="homepage">
@@ -36,7 +37,7 @@ onblur="this.placeholder = '   Search your lyrics'">
  <h5>Last seen</h5>
 <div id="historic-container" class="row">
 {{#each historyResults}}
-<div class="card-deck" style="width: 200px;", style="""height: 70px;">
+<div class="card-deck" style="width: 200px;", style="height: 70px;">
   <div class="card">
     <img class="card-img-top" src="{{image}}" alt="Card image cap">
     <div class="card-body">
