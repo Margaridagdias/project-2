@@ -1,6 +1,5 @@
 {{#if user}}
 <div id="logo">
-<h1>Finna</h1>
 </div>
 <div id="container">
 </div>
@@ -18,7 +17,7 @@ onblur="this.placeholder = '  Search your lyrics'">
 <hr>
 <div id="search-result-container" class="row">
 {{#each songs}}
-<div class="card" style="width: 20rem;">
+<div class="card" style="width: 20rem;" style="padding: 10px;" style="margin: 10px">
   <img src="{{result.header_image_thumbnail_url}}" class="card-img-top" alt="album_cover">
   <div class="card-body" style="align-items: center">
     <h6 class="card-title">{{result.full_title}}</h6>

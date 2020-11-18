@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #fffcf2 !important; }
 
@@ -20,7 +19,8 @@ a {
   position: absolute;
   width: 305px;
   height: 76px;
-  left: 570px;
+  margin-left: 40%;
+  margin-right: 50%;
   top: 0px;
   font-family: 'Syne Mono', monospace;
   font-style: normal;
@@ -44,14 +44,14 @@ a {
 #Homepage-div {
   background-image: url(../images/music-happy.jpg);
   background-size: cover;
+  width: 100vw;
   height: 800px;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white; }
+  color: white;
+  border: 4px solid black; }
 
 #Homepage-div h2 {
   font-size: 6em; }
@@ -69,12 +69,13 @@ a {
 #Homepage-div p {
   font-size: 3em; }
 
+#container-nav {
+  width: 100vw; }
+
 #Homepage-div1 {
   background-color: orange;
-  width: 100%;
+  width: 100vw;
   height: 200px;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,6 +145,12 @@ a {
   height: 40px; }
 
 /* songs search view*/
+#search-result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content; }
+
 #search-result-container h6 {
   height: 100px; }
 
@@ -163,18 +170,14 @@ a {
 
 #historic-div {
   margin-top: 50px;
-  background-color: black;
-  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 450px;
   padding: 20px;
   text-align: center; }
 
 #historic-div h5 {
   color: white;
   padding: 5px; }
-
-.card-deck {
-  background-color: black !important;
-  padding: 20px; }
 
 /*lyrics result*/
 #results-container {
