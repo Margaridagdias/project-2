@@ -8,7 +8,7 @@ router.get('/profile', (req, res, next) => {
   console.log(user._id)
   User.findById(user._id)
   .then((thisUser) => {
-    res.render('profile', {thisUser});
+    res.render('profile', {thisUser, user: req.app.locals.loggedUser});
   })
 
 });
@@ -20,7 +20,7 @@ router.post('/profile', (req, res) => {
     username,
     email
   }).then((updatedUser) => {
-    res.redirect(`/profile`);
+    res.redirect('/profile');
   });
 });
 

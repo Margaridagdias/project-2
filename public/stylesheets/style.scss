@@ -1,15 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
   background-color: rgb(255, 252,242) !important;
+
 }
+  
+
 a {
   color: #00B7FF; }
+
+
+/* Login view */ 
+#login-form {
+  margin-top: 200px;
+  background-color: black;
+  height: 300px;
+  width: 400px;
+}
+
+
 /* index view */
+
+#nav-bar-logo {
+  /* finna */
+  position: absolute;
+  width: 305px;
+  height: 76px;
+  left: 570px;
+  top: 0px;
+  
+  font-family: 'Syne Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 43px;
+  text-align: center;
+
+color: white;
+}
+
+#logo {
+font-family: 'Syne Mono', monospace;
+font-style: normal;
+font-weight: normal;
+text-align: center;
+font-size: 100em;
+text-align: center;
+color:black;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+
 #Homepage-div {
   background-image: url(../images/music-happy.jpg);
   background-size: cover;
-  height: 1000px;
+ 
   margin: 0;
   padding: 0;
   display: flex;
@@ -17,10 +66,18 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
+  position: absolute;
+  width: 1536px;
+  height: 704px;
+  left: 0px;
+  top: 50px;
+
 }
+
 #Homepage-div h2 {
   font-size: 6em;
 }
+
 #Homepage-div a {
   width: 300px;
   height: 50px;
@@ -31,9 +88,11 @@ a {
   padding: 0;
   margin-top: 30px;
 }
+
 #Homepage-div p {
   font-size: 3em;
 }
+
 #Homepage-div1 {
   background-color: orange;
   width: 100%;
@@ -45,49 +104,66 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 #Homepage-div1 h2 {
   font-size: 3em;
 }
+
 #Homepage-div1 p {
   font-size: 1.5em;
 }
+
+
 #index-container {
   display: flex;
   justify-content: center;
   align-content: center;
 }
+
 #index-container button {
   margin-top: 20px;
 }
+
 #index-container p {
   position: absolute;
   margin-top: 70px;
 }
+
+
 #signup-form {
   width: 500px;
 }
+
+
+
 /* search lyrics view */
+
 #search-homepage {
   display: flex;
   align-content: center;
   justify-content: center;
   margin-bottom: 200px;
+
 }
+
 #search-homepage button {
   margin-top: 20px;
   width: 200px;
-  margin-left: 350px;
+  margin-left: 360px;
 }
+
 #search-bar {
   background-color: black;
   outline: none;
   box-shadow: 5px 5px #888888;
   color: white;
+  text-align: center;
   width: 900px;
   margin: 5px;
   height: 50px;
   border-radius: 20px;
 }
+
 #navbar {
   display: flex;
   justify-content: flex-end;
@@ -96,30 +172,73 @@ a {
   width: 100%;
   margin-bottom: 300px;
 }
+
 #navbar h2 {
   margin-right: 30px;
 }
+
 #navbar a {
   margin-right: 10px;
   margin-left: 10px;
   height: 40px;
 }
+
 #navbar button {
   height: 40px;
 }
+
+
 /* songs search view*/
-#search-result-container {
+
+#search-result-container h6 {
+  height: 100px;
+
+}
+#search-result-container img {
+  height: 286px;
+}
+
+#search-result-container a {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
-.card {
-  width: 400px;
+
+#historic-container img {
+  height: 140px;
 }
+
+#historic-container {
+  justify-content: center;
+}
+
+#historic-div {
+  margin-top: 50px;
+  background-color: black;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
+}
+
+#historic-div h5 {
+  color: white;
+  padding: 5px;
+}
+
+.card-deck {
+  background-color: black !important;
+  padding: 20px;
+}
+
 /*lyrics result*/
 #results-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
+  margin-left: 25%;
 }
+
+
+
 /*# sourceMappingURL=style.css.map */

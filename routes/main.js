@@ -20,6 +20,25 @@ router.get('/main', (req, res, next) => {
   });
 });
 
+//FALTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+//Update History
+router.post('/main', (req, res) => {
+  let history = req.session.currentUser
+  let { full_title } = req.body;
+  History.findByIdAndUpdate(history._id, {
+    full_title })
+    .then((updatedHistory) => {
+    res.redirect('/main');
+  });
+});
+
+//delete history
+router.post('/main/delete', (req, res) => {
+  History.findByIdAndRemove(history-_id)
+  .then((deletedHistory) => {
+    res.redirect('/main');
+  });
+});
 
 
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,18 +7,55 @@ body {
 a {
   color: #00B7FF; }
 
+/* Login view */
+#login-form {
+  margin-top: 200px;
+  background-color: black;
+  height: 300px;
+  width: 400px; }
+
 /* index view */
+#nav-bar-logo {
+  /* finna */
+  position: absolute;
+  width: 305px;
+  height: 76px;
+  left: 570px;
+  top: 0px;
+  font-family: 'Syne Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 43px;
+  text-align: center;
+  color: white; }
+
+#logo {
+  font-family: 'Syne Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  font-size: 100em;
+  text-align: center;
+  color: black;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
 #Homepage-div {
   background-image: url(../images/music-happy.jpg);
   background-size: cover;
-  height: 1000px;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white; }
+  color: white;
+  position: absolute;
+  width: 1536px;
+  height: 704px;
+  left: 0px;
+  top: 50px; }
 
 #Homepage-div h2 {
   font-size: 6em; }
@@ -77,13 +115,14 @@ a {
 #search-homepage button {
   margin-top: 20px;
   width: 200px;
-  margin-left: 350px; }
+  margin-left: 360px; }
 
 #search-bar {
   background-color: black;
   outline: none;
   box-shadow: 5px 5px #888888;
   color: white;
+  text-align: center;
   width: 900px;
   margin: 5px;
   height: 50px;
@@ -109,19 +148,45 @@ a {
   height: 40px; }
 
 /* songs search view*/
-#search-result-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+#search-result-container h6 {
+  height: 100px; }
 
-.card {
-  width: 400px; }
+#search-result-container img {
+  height: 286px; }
+
+#search-result-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#historic-container img {
+  height: 140px; }
+
+#historic-container {
+  justify-content: center; }
+
+#historic-div {
+  margin-top: 50px;
+  background-color: black;
+  height: fit-content;
+  padding: 20px;
+  text-align: center; }
+
+#historic-div h5 {
+  color: white;
+  padding: 5px; }
+
+.card-deck {
+  background-color: black !important;
+  padding: 20px; }
 
 /*lyrics result*/
 #results-container {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 50%;
+  margin-left: 25%; }
 
 /*# sourceMappingURL=style.css.map */
 
