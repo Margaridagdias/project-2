@@ -13,7 +13,7 @@ const MongoStore   = require('connect-mongo')(session);
 
 
 mongoose
-  .connect('mongodb://localhost/projeto2', {useNewUrlParser: true,  useUnifiedTopology: true})
+  .connect(process.env.MONGODB_URL, {useNewUrlParser: true,  useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
