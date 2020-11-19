@@ -11,7 +11,7 @@ const historySchema = new Schema(
     date: { type: Date, default: Date.now 
     },
     dateString: {type: String},
-    idmatch: {type:String}
+    idmatch: { type:String} 
   }
 )
 

@@ -24,6 +24,15 @@ a {
 
 /* index view */
 
+.collapse li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.collapse li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 #nav-bar-logo {
   /* finna */
@@ -148,9 +157,10 @@ padding-bottom: 100px;
 }
 
 #search-homepage button {
-  width: 20vw;
+  width: 18vw;
   margin:0 auto;
   display:block;
+  border-radius: 20px;
 
 }
 
@@ -163,7 +173,7 @@ padding-bottom: 100px;
   width: 80vw;
   height: 50px;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #navbar {
@@ -198,6 +208,7 @@ padding-bottom: 100px;
   justify-content: center;
   width: fit-content;
 }
+
 
 #search-result-container h6 {
   height: 100px;
@@ -259,7 +270,7 @@ padding-bottom: 100px;
 }
 
 .page-footer {
-  background-color:rgb(40,50,55);
+  background-color:rgba(0, 0, 0, 0.9);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -278,7 +289,7 @@ padding-bottom: 100px;
 }
 
 #footer-container {
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 /*# sourceMappingURL=style.css.map */

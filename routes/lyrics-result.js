@@ -21,7 +21,7 @@ router.get('/lyrics-result/:songId', (req, res) => {
 
       let dateString = new Date().toLocaleString("en-GB")
     // falta acrescentar à frente de artist name e song ------------------------------------------
-       History.create({ song: songFound.song.full_title, image: songFound.song.header_image_thumbnail_url, dateString, idmatch: songFound.id}).then(() => {
+       History.create({ song: songFound.song.full_title, image: songFound.song.header_image_thumbnail_url, dateString, idmatch: songFound.song.id}).then(() => {
       res.render('lyrics-result', { songs: songFound.song, user: req.session.currentUser});
     })
     .catch((err) => {
