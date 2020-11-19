@@ -43,12 +43,12 @@ onblur="this.placeholder = '  Search your lyrics'">
     
 {{!-- MARGARIDA DIAS ------------------------------------------------ --}}
       <form action="/main/delete/{{_id}}" method="POST">
-     <button type="submit" class="btn btn-dark">DELETE</button>
+     <button type="submit" class="btn btn-outline-danger" style="margin: 8px;">DELETE</button>
      </form>
 
 {{!-- ------------------------------------------------------------------ --}}
-    <div class="card-footer">
-      <small class="text-muted">total views </small>
+    <div class="card-footer" style="background-color: rgb(209, 209, 209)">
+      <small class="text-muted">added on {{dateString}} </small>
     </div>
   </div>
 </div>

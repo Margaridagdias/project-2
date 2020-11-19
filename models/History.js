@@ -9,7 +9,8 @@ const historySchema = new Schema(
       type: String
     },
     date: { type: Date, default: Date.now 
-    }
+    },
+    dateString: {type: String}
   }
 )
 

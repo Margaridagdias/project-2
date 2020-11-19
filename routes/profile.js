@@ -5,6 +5,9 @@ const User = require ('../models/User.model')
 
 router.get('/profile', (req, res, next) => {
   let user = req.app.locals.loggedUser
+  if (!user) {
+    res.redirect('/login')
+  }
   console.log(user._id)
   User.findById(user._id)
   .then((thisUser) => {
