@@ -73,7 +73,7 @@ app.get('/', (req, res) => {
 
 
 // default value for title local
-app.locals.title = 'Genius';
+app.locals.title = 'finna';
 
 
 
