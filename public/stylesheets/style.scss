@@ -136,7 +136,8 @@ padding-bottom: 80px;
 
 #index-container p {
   position: absolute;
-  margin-top: 70px;
+  margin-top: 10px;
+  font-size: 0.7em;
 }
 
 
@@ -157,7 +158,7 @@ padding-bottom: 80px;
 }
 
 #search-homepage button {
-  width: 18vw;
+  width: 40vw;
   margin:0 auto;
   display:block;
   border-radius: 20px;
@@ -201,6 +202,7 @@ padding-bottom: 80px;
 
 
 /* songs search view*/
+
 
 #search-result-container {
   display: flex;
@@ -258,6 +260,7 @@ padding-bottom: 80px;
   justify-content: center;
   text-align: center;
   width: 100%;
+  padding-top: 75px;
 }
 
 

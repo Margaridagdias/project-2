@@ -108,7 +108,8 @@ a {
 
 #index-container p {
   position: absolute;
-  margin-top: 70px; }
+  margin-top: 10px;
+  font-size: 0.7em; }
 
 #signup-form {
   width: 500px; }
@@ -121,7 +122,7 @@ a {
   margin-bottom: 100px; }
 
 #search-homepage button {
-  width: 18vw;
+  width: 40vw;
   margin: 0 auto;
   display: block;
   border-radius: 20px; }
@@ -202,7 +203,8 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  padding-top: 75px; }
 
 .page-footer img {
   width: 30px;
