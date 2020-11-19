@@ -10,17 +10,17 @@
 </head>
 <body>
 
+<div id="footer-container">
   {{{body}}}
+</div>
 
 
-<div style="display: flex;">
-  <nav id="container-nav" class="navbar navbar-expand-md fixed-top navbar-dark" style="background-color: black;", "padding: 0px">
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark" style="background-color: black;", "padding: 0px">
   <a class="navbar-brand" href="#" id="nav-bar-logo">Finna</a>
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
  
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -46,7 +46,49 @@
     </ul>
   </div>
 </nav>
-</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <img class="fab fa-facebook-f"src="/images/facebook.png" alt="facebookicon">
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <img class="fab fa-twitter"src="/images/twitter.png" alt="twittericon">
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <img class="fab fa-instagram" src="/images/instagram.png" alt="instagramicon">
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <img class="fab fa-youtube" src="/images/youtube.png" alt="youtubeicon">
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://finna2020.herokuapp.com"> finna.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
   <script src="/javascripts/script.js"></script>
 </body>

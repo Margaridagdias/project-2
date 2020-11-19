@@ -234,6 +234,12 @@ padding-bottom: 100px;
   padding: 5px;
 }
 
+#card-historic {
+  margin: 10px;
+  border: 10px solid rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+}
+
 /*lyrics result*/
 #results-container {
   display: flex;
@@ -244,5 +250,35 @@ padding-bottom: 100px;
 }
 
 
+
+.page-footer img {
+  width: 30px;
+  box-shadow: 2px 2px 5px rgb(23, 29, 32);
+  border-radius: 20px;
+
+}
+
+.page-footer {
+  background-color:rgb(40,50,55);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.footer-copyright {
+  color: lightgrey;
+  text-decoration: none;
+  background-color: black;
+}
+
+.footer-copyright a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-container {
+  margin-bottom: 150px;
+}
 
 /*# sourceMappingURL=style.css.map */
