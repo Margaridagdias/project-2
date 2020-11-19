@@ -60,13 +60,13 @@ a {
   font-size: 9vw; }
 
 #Homepage-div a {
-  width: 300px;
+  width: 220px;
   height: 50px;
-  font-size: 1.7em;
-  border-radius: 20px;
+  font-size: 1.4em;
+  border-radius: 25px;
   text-align: center;
   vertical-align: middle;
-  padding: 0;
+  padding: 1;
   margin-top: 30px; }
 
 #Homepage-div p {
@@ -85,7 +85,7 @@ a {
   align-items: center; }
 
 #Homepage-div1 h2 {
-  font-size: 6vw; }
+  font-size: 5vw; }
 
 #Homepage-div1 p {
   font-size: 3vw; }
