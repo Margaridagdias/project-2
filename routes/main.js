@@ -15,6 +15,8 @@ function requireLogin(req, res, next) {
 router.get('/main', (req, res, next) => {
   req.app.locals.loggedUser = req.session.currentUser;
   History.find()
+  .sort("-date")
+  .limit(8)
   .then((historyResults)=> {
 
   let filterArray = historyResults.filter((result, pos, arr) => {
@@ -28,21 +30,12 @@ router.get('/main', (req, res, next) => {
   });
 });
 
-//FALTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-//Update History
-router.post('/main', (req, res) => {
-  let history = req.session.currentUser
-  let { full_title } = req.body;
-  History.findByIdAndUpdate(history._id, {
-    full_title })
-    .then((updatedHistory) => {
-    res.redirect('/main');
-  });
-});
+
 
 //delete history
-router.post('/main/delete', (req, res) => {
-  History.findByIdAndRemove(history-_id)
+router.post('/main/delete/:id', (req, res) => {
+  let id = req.params.id
+  History.findByIdAndRemove(id)
   .then((deletedHistory) => {
     res.redirect('/main');
   });
