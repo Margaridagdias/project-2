@@ -22,7 +22,7 @@ router.get('/main', (req, res, next) => {
       return pos === arr.findIndex(el => (el['song'] === result['song']))
     })
 
-    let limitArray = [...filterArray.slice(0, 8)]
+    let limitArray = [...filterArray.slice(0, 7)]
 
     
     res.render('songs-search-results', { user: req.app.locals.loggedUser, historyResults: limitArray });
