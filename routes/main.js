@@ -16,14 +16,13 @@ router.get('/main', (req, res, next) => {
   req.app.locals.loggedUser = req.session.currentUser;
   History.find()
   .sort("-date")
-  .limit(8)
   .then((historyResults)=> {
 
   let filterArray = historyResults.filter((result, pos, arr) => {
       return pos === arr.findIndex(el => (el['song'] === result['song']))
     })
 
-    let limitArray = [...filterArray.slice(0, 10)]
+    let limitArray = [...filterArray.slice(0, 8)]
 
     
     res.render('songs-search-results', { user: req.app.locals.loggedUser, historyResults: limitArray });
