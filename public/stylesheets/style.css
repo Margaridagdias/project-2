@@ -17,18 +17,19 @@ a {
 #nav-bar-logo {
   /* finna */
   position: absolute;
-  width: 305px;
   height: 76px;
-  margin-left: 37%;
-  margin-right: 50%;
-  top: 0px;
+  width: 100px;
+  margin: 0 auto;
   font-family: 'Syne Mono', monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
   line-height: 43px;
   text-align: center;
-  color: white; }
+  color: white;
+  margin-left: 45%;
+  margin-right: 50%;
+  margin-top: 20px; }
 
 #logo {
   font-family: 'Syne Mono', monospace;
@@ -42,10 +43,12 @@ a {
   padding-bottom: 100px; }
 
 #Homepage-div {
-  background-image: url(../images/music-happy.jpg);
-  background-size: cover;
+  background-image: url(../images/music-happy_big.jpg);
+  background-size: 200vh;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 800px;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +57,7 @@ a {
   border: 4px solid black; }
 
 #Homepage-div h2 {
-  font-size: 6em; }
+  font-size: 9vw; }
 
 #Homepage-div a {
   width: 300px;
@@ -67,7 +70,7 @@ a {
   margin-top: 30px; }
 
 #Homepage-div p {
-  font-size: 3em; }
+  font-size: 4vw; }
 
 #container-nav {
   width: 100vw; }
@@ -75,17 +78,17 @@ a {
 #Homepage-div1 {
   background-color: orange;
   width: 100vw;
-  height: 200px;
+  height: 20vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 #Homepage-div1 h2 {
-  font-size: 3em; }
+  font-size: 6vw; }
 
 #Homepage-div1 p {
-  font-size: 1.5em; }
+  font-size: 3vw; }
 
 #index-container {
   display: flex;
@@ -110,9 +113,9 @@ a {
   margin-bottom: 200px; }
 
 #search-homepage button {
-  margin-top: 20px;
-  width: 200px;
-  margin-left: 360px; }
+  width: 20vw;
+  margin: 0 auto;
+  display: block; }
 
 #search-bar {
   background-color: black;
@@ -120,10 +123,10 @@ a {
   box-shadow: 5px 5px #888888;
   color: white;
   text-align: center;
-  width: 900px;
-  margin: 5px;
+  width: 80vw;
   height: 50px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin-bottom: 20px; }
 
 #navbar {
   display: flex;
@@ -171,7 +174,7 @@ a {
 #historic-div {
   margin-top: 50px;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 450px;
+  height: fit-content;
   padding: 20px;
   text-align: center; }
 

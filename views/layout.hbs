@@ -13,17 +13,17 @@
   {{{body}}}
 
 
-
-  <nav id="container-nav" class="navbar navbar-expand-lg navbar fixed-top navbar-dark" style="background-color: black;", "padding: 0px">
+<div style="display: flex;">
+  <nav id="container-nav" class="navbar navbar-expand-md fixed-top navbar-dark" style="background-color: black;", "padding: 0px">
   <a class="navbar-brand" href="#" id="nav-bar-logo">Finna</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
  
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+    <ul class="navbar-nav">
+            <li class="nav-item">
         <a class="nav-link" href="/main">Home <span class="sr-only">(current)</span></a>
       </li>
       {{#if user}}
@@ -45,8 +45,9 @@
       {{/if}}
     </ul>
   </div>
- 
 </nav>
+</div>
+
   <script src="/javascripts/script.js"></script>
 </body>
 </html>
