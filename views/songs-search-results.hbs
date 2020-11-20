@@ -30,7 +30,7 @@ onblur="this.placeholder = '  Search your lyrics'">
 
 {{#unless songs}}
 <div id="historic-div">
- <h5>Last searchs</h5>
+ <h5>Last searchs on Finna</h5>
 <div id="historic-container" class="row">
  
 {{#each historyResults}}
@@ -43,7 +43,7 @@ onblur="this.placeholder = '  Search your lyrics'">
     
 {{!-- MARGARIDA DIAS ------------------------------------------------ --}}
       <form action="/main/delete/{{_id}}" method="POST">
-     <button type="submit" class="btn btn-outline-danger" style="margin: 8px;">DELETE</button>
+     <button type="submit" class="btn btn-outline-danger" style="margin: 8px;">Discard</button>
      </form>
 
 {{!-- ------------------------------------------------------------------ --}}
